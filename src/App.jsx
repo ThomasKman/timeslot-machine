@@ -14,7 +14,7 @@ function App() {
     const [isMeetingEnded, setIsMeetingEnded] = useState(false);
     const [startTime, setStartTime] = useState(null);
     const [isCollapsed, setIsCollapsed] = useState(true); // Default to collapsed
-    const [timeout] = useState(1);
+    const [timeout] = useState(100);
 
     // Timer interval references
     const timerRef = useRef(null);
