@@ -1,0 +1,9 @@
+[
+  { "name": "Scrum - Weekly", "duration": 0, "isInitial": true, "theme": "theme-team" },
+  { "name": "Speaker 1", "duration": 165, "theme": "theme-team" },
+  { "name": "Speaker 2", "duration": 165, "theme": "theme-team" },
+  { "name": "Speaker 3", "duration": 165, "theme": "theme-team" },
+  { "name": "Speaker 4", "duration": 165, "theme": "theme-team" },
+  { "name": "Blocker & Hindernisse", "duration": 165, "theme": "theme-blocker" },
+  { "name": "Spannungsspeicher", "duration": 300, "theme": "theme-spannungsspeicher" }
+]

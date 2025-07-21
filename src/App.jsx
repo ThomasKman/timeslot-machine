@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef} from 'react'
+import {Link} from 'react-router-dom'
 import './App.css'
 import phases from './phases.json'
 
@@ -130,6 +131,10 @@ function App() {
         <div className={`app-container ${getCurrentThemeClass()}`}>
             <div className="fixed-content">
                 <header>
+                    <div className="nav-links">
+                        <Link to="/" className="active">Teams</Link>
+                        <Link to="/scrum-team">Individuals</Link>
+                    </div>
                     <h1>{phases[currentPhase].name}</h1>
                 </header>
 

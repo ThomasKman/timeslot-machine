@@ -102,8 +102,33 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  margin: 0;
+  margin: 0.5rem 0 0;
   color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  background-color: var(--progress-color);
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .timer-container {
@@ -314,6 +339,288 @@ footer {
   font-size: 0.9rem;
   color: #aaaaaa;
   margin-top: 0.2rem;
+}
+
+/* Speaker management styles */
+.speaker-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.speaker-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.speaker-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.duration-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.duration-input-container label {
+  color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.duration-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.duration-info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.duration-input {
+  flex: 1;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.add-speaker-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-speaker-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.speakers-list {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.speakers-list h3 {
+  margin-top: 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.speakers-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.speakers-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: white;
+}
+
+.speaker-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.speaker-name {
+  font-weight: bold;
+}
+
+.speaker-duration {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.remove-speaker-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-speaker-button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: white;
+}
+
+/* Speakers actions styles */
+.speakers-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.clear-speakers-button,
+.random-order-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear-speakers-button:hover,
+.random-order-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.clear-speakers-button:disabled,
+.random-order-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Spannungsspeicher and Blocker item styles */
+.spannungsspeicher-item {
+  background-color: var(--theme-spannungsspeicher-background) !important;
+  border-left: 3px solid var(--theme-spannungsspeicher-primary);
+}
+
+.blocker-item {
+  background-color: var(--theme-blocker-background) !important;
+  border-left: 3px solid var(--theme-blocker-primary);
+}
+
+.irremovable-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 450px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.modal-close-button:hover {
+  color: white;
+}
+
+.manage-speakers-button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: background-color 0.3s;
+}
+
+.manage-speakers-button:hover {
+  background-color: var(--button-hover-color);
 }
 
 /* Media query for smaller screens */

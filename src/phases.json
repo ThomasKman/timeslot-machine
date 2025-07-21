@@ -1,5 +1,5 @@
 [
-  { "name": "Weekly - Meeting", "duration": 0, "isInitial": true, "theme": "theme-team" },
+  { "name": "Team - Weekly", "duration": 0, "isInitial": true, "theme": "theme-team" },
   { "name": "Team 1", "duration": 165, "theme": "theme-team" },
   { "name": "Team 2", "duration": 165, "theme": "theme-team" },
   { "name": "Team 3", "duration": 165, "theme": "theme-team" },
